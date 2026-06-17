@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TechVault Desktop Shop</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Sticky Top Desktop Navbar -->
   <header class="main-header">
-    <div class="logo">TechVault</div>
+    <div class="logo" aria-hidden="false">TechVault</div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="#">Categories</a>
       <a href="#">My Orders</a>
     </nav>
     <div class="cart-icon-container">
-      <a href="checkout.html" class="cart-btn">
+      <a href="checkout.html" id="cart-btn" class="cart-btn" aria-label="View cart">
         🛒 Cart (<span id="cart-count">0</span>)
       </a>
     </div>
@@ -30,6 +31,6 @@
     </div>
   </main>
 
-  <script href="js/catalog.js"></script>
+  <script src="catalog.js"></script>
 </body>
 </html>
