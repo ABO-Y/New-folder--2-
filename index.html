@@ -8,28 +8,112 @@
 </head>
 <body>
 
-  <!-- Sticky Top Desktop Navbar -->
   <header class="main-header">
-    <div class="logo" aria-hidden="false">TechVault</div>
-    <nav class="nav-links">
+    <div class="brand-row">
+      <div class="logo">TechVault</div>
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+    </div>
+
+    <nav class="nav-links" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="#">Categories</a>
       <a href="#">My Orders</a>
     </nav>
-    <div class="cart-icon-container">
-      <a href="checkout.html" id="cart-btn" class="cart-btn" aria-label="View cart">
+
+    <div class="header-actions">
+      <button id="cart-btn" class="cart-btn" type="button" aria-label="Open cart drawer">
         🛒 Cart (<span id="cart-count">0</span>)
-      </a>
+      </button>
     </div>
   </header>
 
-  <!-- Main Desktop Grid Section -->
-  <main class="container">
-    <h2>Featured Desktop Products</h2>
-    <div id="product-grid" class="grid-layout">
-      <!-- JavaScript will inject individual product cards right here -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Modern desktop essentials</p>
+      <h1>Upgrade your workspace with purple-powered gear.</h1>
+      <p class="hero-text">Find premium monitors, keyboards, and accessories designed to improve comfort, speed, and style.</p>
+      <div class="hero-actions">
+        <a href="#product-grid" class="primary-btn">Shop Featured Gear</a>
+        <button id="hero-cart-btn" class="secondary-btn" type="button">View Cart</button>
+      </div>
     </div>
+    <div class="hero-visual">
+      <div class="visual-card visual-card-1">4K UltraWide Monitor</div>
+      <div class="visual-card visual-card-2">RGB Mechanical Keyboard</div>
+      <div class="visual-card visual-card-3">Wireless Ergonomic Mouse</div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="shop-controls">
+      <div class="search-group">
+        <label for="search-input" class="visually-hidden">Search products</label>
+        <input id="search-input" type="search" placeholder="Search products, monitors, keyboards...">
+      </div>
+      <div class="filter-group">
+        <label for="category-filter">Category</label>
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All categories</option>
+          <option value="monitors">Monitors</option>
+          <option value="keyboards">Keyboards</option>
+          <option value="accessories">Accessories</option>
+          <option value="audio">Audio</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="product-header">
+      <div>
+        <h2 class="section-title">Featured Desktop Products</h2>
+        <p class="section-copy">Browse our curated collection of high-performance tech designed for modern productivity.</p>
+      </div>
+      <div class="product-count" id="product-count">4 products available</div>
+    </div>
+
+    <div id="product-grid" class="grid-layout"></div>
   </main>
+
+  <aside class="cart-drawer" id="cart-panel" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div>
+        <h2>Your Cart</h2>
+        <p class="drawer-subtitle">Items saved for checkout</p>
+      </div>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart drawer">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button id="checkout-btn" class="checkout-btn" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <div class="logo">TechVault</div>
+      <p>Premium desktop hardware with a polished purple finish.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3>Explore</h3>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Offers</a>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="#">Contact</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 TechVault. Crafted for modern workspaces.</div>
+  </footer>
 
   <script src="catalog.js"></script>
 </body>
